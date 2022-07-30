@@ -1,11 +1,11 @@
-var a = document.querySelectorAll(".btns");
+var a = document.querySelectorAll(".btn");
+var b = document.querySelectorAll(".up");
+var c = document.querySelectorAll(".qty");
 function calculate() {
-    var up = parseInt(this.parentNode.previousElementSiblings.firstchild.value);
-    var qty = parseInt(this.parentNode.previousElementSiblings.previousElementSiblings.firstchild.value);
-    var prc = up * qty;
-    console.log(z);
-    this.parentNode.previousElementSiblings.firstchild.innerText = prc;
-
+    var x=(this.parentNode.previousElementSibling.previousElementSibling.innerText);
+    var y=parseInt(this.parentNode.previousElementSibling.firstChild.value);
+    var z=x*y;
+    this.parentNode.nextElementSibling.innerText=z;
 }
 function addEvent(a) {
     a.addEventListener("click", calculate);
